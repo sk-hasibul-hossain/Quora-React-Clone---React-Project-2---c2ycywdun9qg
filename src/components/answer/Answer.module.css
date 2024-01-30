@@ -1,0 +1,8 @@
+.answer_container{
+    width: 100%;
+    height: 99vh;
+    >img{
+        width: 100%;
+        height: 100%;
+    }
+}

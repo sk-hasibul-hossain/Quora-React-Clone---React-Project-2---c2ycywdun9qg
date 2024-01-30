@@ -1,0 +1,82 @@
+.user_profile_modal_container{
+    position: absolute;
+    border: 1px solid rgb(202, 202, 202);
+    top: 45px;
+    left: -40px;
+    background-color: #fff;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.user_details_area{
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    border-bottom: 1px solid rgb(202, 202, 202);
+}
+
+.quora_header_user_avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #afacac;
+    color: #ebe7e7;
+    background-color: rgb(236, 109, 6);
+    &:hover{
+        background-color: rgb(231, 130, 46);
+        /* cursor: pointer; */
+    }
+}
+
+.user_profile_name_area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    >h1{
+        font-size: 1rem;
+    }
+}
+
+.right_icon{
+    color: #414141;
+}
+
+.items{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.87rem;
+    padding: 4px 8px;
+    >button{
+        border-radius: 20px 20px 20px 20px;
+        border: none;
+        &:hover{
+            background-color: #414141;
+            color: #fff;
+            cursor: pointer;
+        }
+    }
+    &:hover{
+        background-color: #ebe7e7;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .user_profile_modal_container{
+        top: 43px;
+        left:-110px;
+    }
+}

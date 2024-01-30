@@ -1,0 +1,12 @@
+.right_side_Bar_container{
+    
+}
+
+.right_side_bar_ad_title{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid #b6b5b5;
+    font-size: 0.87rem;
+    color: #666464;
+}

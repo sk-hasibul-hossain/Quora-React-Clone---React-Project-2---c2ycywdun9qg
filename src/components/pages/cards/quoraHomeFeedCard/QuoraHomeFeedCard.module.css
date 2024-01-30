@@ -1,0 +1,337 @@
+.quora_home_feed_card_container{
+    /* border: 1px solid green; */
+    border: 1px solid #afacac;
+    background-color: #fff;
+}
+
+.head_despcription_area{
+    padding: 8px;
+}
+
+.quora_home_user_avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #afacac;
+    color: #ebe7e7;
+    background-color: rgb(236, 109, 6);
+    cursor:context-menu;
+    /* &:hover{
+        background-color: rgb(247, 170, 54);
+        cursor: pointer;
+    } */
+}
+
+.quora_home_user_avatar_image_box{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.post_image{
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.quora_home_header{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    >span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        color: #707070;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        &:hover{
+            background-color: #cecece;
+        }
+    }
+}
+
+.quora_home_feed_header_user_details{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    width: 100%;
+    align-items: center;
+}
+
+.quora_home_user_name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    >span{
+        font-size: 0.87rem;
+        color: #2e69ff;
+        font-weight: 600;
+    }
+}
+
+.post_porofile_name_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    >label{
+        font-size: 0.9rem;
+        font-weight: 600;
+        /* border: 1px solid red; */
+    }
+    >span{
+        font-size: 0.72rem;
+        color: #707070;
+        /* border: 1px solid red; */
+    }
+}
+
+.post_follow_span{
+    font-size: 0.87rem;
+    color: #2e69ff;
+    font-weight: 600;
+}
+
+.quora_home_feed_despcriotion{
+    >h2{
+        font-size: 1rem;
+    }
+    >p{
+        color: #504f4f;
+        font-size: 0.91rem;
+    }
+}
+
+.quora_home_feed_image{
+    width: 100%;
+    /* background-color: #504f4f; */
+    >img{
+        width: 100%;
+        height: 50%;
+    }
+}
+
+.post_footer_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    padding: 4px;
+    /* border: 1px solid red; */
+}
+
+.vote_and_comment_section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 8px;
+    /* border: 1px solid red; */
+}
+
+/* .up_vote_down_vote_comment_wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid red;
+} */
+
+.up_vote_and_down_vote_box{
+    display: flex;
+    flex-direction: row;
+}
+
+.up_vote_box{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    border: 1px solid #504f4f;
+    border-radius: 20px 0px 0px 20px;
+    padding: 8px;
+    background-color: rgba(179, 179, 179, 0.2);
+    &:hover{
+        background-color: #cecece;
+        cursor: pointer;
+    }
+}
+
+.up_arrow_icon{
+    color: #707070;
+}
+
+.up_vote_active{
+    color: #2e69ff;
+}
+
+.up_vote_label{
+    font-size: 0.87rem;
+    color: #504f4f;
+    cursor: pointer;
+}
+
+.up_vote_label_active{
+    color: #2e69ff;
+}
+
+.svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .icon {
+    stroke-width: 1.5;
+    stroke: #666;
+    fill: none;
+    stroke-linejoin: round;
+  }
+  
+  .iconFill {
+    fill: none; /* Change this to the color you want */
+  }
+
+.down_vote_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+    border-radius: 0px 20px 20px 0px;
+    border-top: 1px solid #504f4f;
+    border-right: 1px solid #504f4f;
+    border-bottom: 1px solid #504f4f;
+    background-color: rgba(139, 138, 138, 0.2);
+    color: #504f4f;
+    &:hover{
+        background-color: #cecece;
+        cursor: pointer;
+    }
+}
+
+.down_vote_box_active{
+    color: #2e69ff;
+}
+
+.down_arrow_icon{
+    display: flex;
+    color: #707070;
+}
+
+.down_arrow_icon_active{
+    color: #2e69ff;
+}
+
+.comment_section{
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #ebe7e7;
+    >label{
+        color: #707070;
+    }
+    &:hover{
+        background-color: #bdbaba;
+        cursor: pointer;
+    }
+}
+
+.edit_and_post_section{
+    position: relative;
+    >span{
+        &:hover{
+            color: #2e69ff;
+            cursor: pointer;
+        }
+    }
+}
+
+.edit_and_delete_post_modal{
+
+}
+
+.comment_input_area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px 8px;
+    background-color: rgba(139, 138, 138, 0.2);
+    >input{
+        outline: none;
+        width: 70%;
+        padding: 12px;
+        border-radius: 20px 20px 20px 20px;
+        border: 1px solid #cecece;
+        &:hover{
+            border: 1px solid #2e69ff;
+        }
+    }
+}
+
+.add_comment_btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px 20px 20px 20px;
+    border: none;
+    background-color: #6087e7;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.comment_btn_active{
+    background-color: #2e69ff;
+    cursor: pointer;
+}
+
+.comment_body{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 8px 0px;
+}
+
+.night_color{
+    background-color: rgba(39, 39, 39, 0.7);
+    color: #9b9a9a;
+    >h2{
+        color: #9b9a9a;
+    }
+    >p{
+        color: #9b9a9a;
+    }
+}
+
+.votes_btn_night_mode{
+    color: #9b9a9a;
+}
+
+.night_hover_adjustment{
+    &:hover{
+        background-color: rgb(78, 78, 78);
+    }
+}
+
+.night_color_comment_btn{
+    background-color: #444444;
+    /* color: #ebe7e7; */
+    >label{
+        color: #9b9a9a;
+    }
+    &:hover{
+        background-color: rgb(78, 78, 78);
+    }
+}

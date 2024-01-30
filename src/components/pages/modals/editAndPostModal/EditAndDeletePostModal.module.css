@@ -1,0 +1,66 @@
+.edit_and_delete_post_modal_container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: -70px;
+    left: -60px;
+    border: 1px solid rgb(11, 97, 179);
+    background-color: rgb(235, 239, 243);
+    padding: 4px;
+    color: rgb(9, 119, 119);
+    border-radius: 4px;
+    width: 70px;
+}
+
+.post_edit_btn{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    border-bottom: 1px solid rgb(11, 97, 179);
+    font-size: 0.87rem;
+    padding: 4px;
+    &:hover{
+        background-color: rgb(220, 232, 243);
+        cursor: pointer;
+    }
+}
+
+.post_delete_btn{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    font-size: 0.87rem;
+    &:hover{
+        background-color: rgb(220, 232, 243);
+        cursor: pointer;
+    }
+}
+
+.post_edit_delete_triangle{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid rgb(220, 232, 243);
+    right: 3px;
+    bottom: -10px;
+    z-index: 1;
+}
+
+.post_edit_delete_triangle_overLay{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid rgb(11, 97, 179);
+    right: 0px;
+    bottom: -12px;
+    z-index: 0;
+}
+

@@ -1,0 +1,93 @@
+.feed_comment_card{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 12px;
+    background-color: #daecdc;
+    margin-top: 8px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.quora_home_user_avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #afacac;
+    color: #ebe7e7;
+    background-color: #07b315;
+    cursor:context-menu;
+    /* &:hover{
+        background-color: rgb(247, 170, 54);
+        cursor: pointer;
+    } */
+}
+
+.comment_card_wrapper{
+    >h1{
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+    }
+    >label{
+        font-size: 0.87rem;
+        color: #303130;
+    }
+}
+
+.delete_wraper{
+    position: relative;
+    >span{
+        cursor: pointer;
+        border-radius: 50%;
+        padding: 0px 4px;
+        &:hover{
+            background-color: #afacac;
+        }
+    }
+}
+
+.delete_comment_btn_area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    gap: 4px;
+    top: -27px;
+    right: 0px;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid #04d1d8;
+    padding: 6px;
+    cursor: pointer;
+    background-color: rgb(28, 156, 156);
+}
+
+.delete_comment_btn{
+    color: #fff;
+    font-size: 0.78rem;
+}
+
+.comment_delete_btn_icon{
+    color: rgb(0, 83, 116);
+}
+
+.night_mode{
+    background-color: rgba(218, 236, 220, 0.2);
+}
+
+.night_mode_font_color{
+    color: #c0bfbf;
+    >label{
+        color: #c0bfbf;
+    }
+}

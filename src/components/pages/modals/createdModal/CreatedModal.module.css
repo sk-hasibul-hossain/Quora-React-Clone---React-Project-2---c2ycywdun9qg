@@ -1,0 +1,30 @@
+.created_modal_container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    animation-name: created;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    /* border: 1px solid red; */
+}
+
+.created_modal_inner_container{
+    border: 1px solid #06a10d;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    padding: 8px;
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 8px ;
+    background-color: rgba(40, 212, 55,0.7);
+}
+
+@keyframes created {
+    from {top: -40px}
+    to {top: 0px}
+}

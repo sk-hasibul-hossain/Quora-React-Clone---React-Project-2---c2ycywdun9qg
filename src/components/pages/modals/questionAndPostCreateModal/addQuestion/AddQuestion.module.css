@@ -1,0 +1,135 @@
+.add_question_container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    /* border: 1px solid red; */
+    height: 100%;
+    margin-top: 4px;
+}
+.add_question_box_intruction{
+    color: #2e69ff;
+    background-color: #ebf0ff;
+    padding: 8px 0px;
+    >h1{
+        font-size: 1rem;
+        padding-left: 20px;
+    }
+    >ul{
+        >li{
+            font-size: 0.87rem;
+        }
+    }
+}
+
+.question_input_area{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    >input{
+        padding: 8px 0px;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid#c0c0c0;
+        &:hover{
+            border-bottom: 1px solid #2e69ff;
+        }
+    }
+}
+
+.quora_header_user_avatar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid #afacac;
+    color: #ebe7e7;
+    background-color: rgb(236, 109, 6);
+    &:hover{
+        background-color: rgb(231, 130, 46);
+        /* cursor: pointer; */
+    }
+}
+
+.question_input_title{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+}
+
+.question_visibility{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    align-items: center;
+    color: #4d4c4c;
+    padding: 4px 8px;
+    border-radius: 20px 20px 20px 20px;
+    border: 1px solid #c0c0c0;
+    font-size: 0.87rem;
+    &:hover{
+        background-color: #ebe7e7;
+    }
+}
+
+.question_button_area{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    border-top: 1px solid #c9c5c5;
+    /* background-color: #2e69ff; */
+    padding-top: 8px;
+}
+
+.question_cancel_btn{
+    border: none;
+    padding: 8px 12px;
+    border-radius: 20px 20px 20px 20px;
+    &:hover{
+        background-color: #ebe7e7;
+        cursor: pointer;
+    }
+}
+
+.add_question_btn{
+    background-color: #4f81fd;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px 20px 20px 20px;
+}
+
+.active_btn{
+    background-color: #2e69ff;
+    cursor: pointer;
+}
+
+.box_wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.night_add_question_box_intruction{
+    background-color: rgba(75, 75, 77, 0.4);
+}
+
+.night_fa_caret_Right{
+    color: #929090;
+}
+
+.night_question_input_area{
+    >input{
+        background-color: #1f1e1e;
+        color: #929090;
+    }
+}
