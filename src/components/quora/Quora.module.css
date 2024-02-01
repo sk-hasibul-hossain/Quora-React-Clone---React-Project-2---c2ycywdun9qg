@@ -2,8 +2,8 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    height: 91.8vh;
-    /* height: 100vh; */
+    /* height: 91.8vh; */
+    height: 100%;
     /* border: 1px solid red; */
     /* background-color: rgba(245, 239, 253, 0.6); */
     background-color: rgba(139, 138, 138, 0.2);
@@ -30,7 +30,7 @@
     /* border: 1px solid red; */
     padding-right: 4px;
     margin-top: 16px;
-    overflow-y:hidden;
+    /* overflow-y:hidden;
     overflow-x: hidden;
     &:hover{
         overflow-y: scroll;
@@ -38,15 +38,15 @@
     }
     &::-webkit-scrollbar{
         width: 4px;
-        /* background-color: green; */
+        
     }
     &:hover::-webkit-scrollbar{
         width: 4px;
     }
     &::-webkit-scrollbar-thumb{
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        border: 3px solid #838282;  /* creates padding around scroll thumb */
-    }
+        border-radius: 20px;       
+        border: 3px solid #838282;  
+    } */
 }
 
 .right_side_bar_section{

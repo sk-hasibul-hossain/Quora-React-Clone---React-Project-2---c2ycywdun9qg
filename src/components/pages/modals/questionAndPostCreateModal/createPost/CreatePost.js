@@ -80,7 +80,7 @@ const CreatePost = () => {
   };
 
   const handleCreatePost = () => {
-    console.log(postContent, postImage, postTitle);
+    // console.log(postContent, postImage, postTitle);
     createPostAPI(postContent, postImage, postTitle);
     setIsCreatedModalOpen("Post created");
   };

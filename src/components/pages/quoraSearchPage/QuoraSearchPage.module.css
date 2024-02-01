@@ -48,3 +48,10 @@
 .night_color{
     background-color: rgba(24, 24, 24, 1);
 }
+
+@media screen and (max-width: 992px){
+    .search_inner_container{
+        margin-top: 100px;
+        width: 100%;
+    }
+}

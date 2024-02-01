@@ -7,6 +7,7 @@ import QuoraHomeFeedCard from "../cards/quoraHomeFeedCard/QuoraHomeFeedCard";
 import { getHeaderWithProjectID } from "../../../utills/services";
 import { BarLoader } from "../../assets/loader/barLoader/BarLoader";
 import {
+  useCreatedModal,
   useHidePostStatus,
   useNewPostStatus,
 } from "../../../provider/AuthProvider";
@@ -14,6 +15,8 @@ import EditPostModal from "../modals/editPostModal/EditPostModal";
 
 const MiddleBar = () => {
   const navigate = useNavigate();
+
+  const { isCreatedModalOpen } = useCreatedModal();
   const { isNewPost } = useNewPostStatus();
   const { hidePostStatus } = useHidePostStatus();
   // const [userDetails, setUserDetails] = useState();
@@ -25,6 +28,9 @@ const MiddleBar = () => {
   const [isEditPostModalOpen, setIsEditPostModalOpen] = useState(false);
   const [updatePost, setUpdatePost] = useState();
   const [postDeleteId, setPostDeleteId] = useState();
+  const [tempPostData, setTempPostData] = useState([]);
+  const [count, setCount] = useState(5);
+  const pageSize = 5;
 
   const setPostLikeDataLocalStorage = (postData) => {
     const posts = postData.map((post, index) => {
@@ -61,6 +67,7 @@ const MiddleBar = () => {
       const orderData = orderigPost(responseData);
       setPostLikeDataLocalStorage(orderData);
       setPostData(orderData);
+      setTempPostData(orderData?.splice(0, 5));
     } catch (err) {
       console.log("error", err);
     } finally {
@@ -68,6 +75,32 @@ const MiddleBar = () => {
     }
   };
 
+  /*infinite scrolling */
+  function handleScroll() {
+    const scrollPosition = window.scrollY;
+    const totalHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
+    console.log(scrollPosition, totalHeight);
+    if (totalHeight * 0.8 <= scrollPosition && postData?.length > count) {
+      // console.log(count);
+      setCount(count + 5);
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [tempPostData]);
+
+  useEffect(() => {
+    console.log(count, tempPostData);
+    if (tempPostData?.length > 0) {
+      setTempPostData([...tempPostData, ...postData?.slice(count, count + 5)]);
+    }
+  }, [count, isCreatedModalOpen]);
+
+  /*infinite scroll End */
   const converShortUserName = (name) => {
     const splitNameArr = name?.split(" ").slice(0, 2);
     setUserSortName(splitNameArr[0]?.substring(0, 1));
@@ -84,8 +117,13 @@ const MiddleBar = () => {
         converShortUserName(uData?.name);
         setUserFullName(uData?.name);
       } else {
-        setPostData(
-          postData?.filter(
+        // setPostData(
+        //   postData?.filter(
+        //     (element) => element?._id.localeCompare(hidePostStatus) !== 0
+        //   )
+        // );
+        setTempPostData(
+          tempPostData?.filter(
             (element) => element?._id.localeCompare(hidePostStatus) !== 0
           )
         );
@@ -99,7 +137,7 @@ const MiddleBar = () => {
         {isLoading ? (
           <BarLoader />
         ) : (
-          postData?.map((post, index) => {
+          tempPostData?.map((post, index) => {
             return (
               <QuoraHomeFeedCard
                 key={index}
