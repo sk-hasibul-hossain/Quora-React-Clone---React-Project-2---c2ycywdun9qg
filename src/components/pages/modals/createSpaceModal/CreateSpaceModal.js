@@ -84,6 +84,7 @@ const CreateSpaceModal = ({ setIsCreateSpaceModalOpen }) => {
     creaSpaceAPI();
     if (!isGroupExist) {
       setIsCreatedModalOpen("New space Created");
+      setIsCreateSpaceModalOpen(false);
     }
   };
   return createPortal(

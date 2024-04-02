@@ -71,7 +71,7 @@ const EditPostModal = ({
 
   const handleUpdatePost = () => {
     updatePostApi();
-    console.log("update post button called");
+    setIsEditPostModalOpen(false);
   };
 
   useEffect(() => {
@@ -144,23 +144,25 @@ const EditPostModal = ({
           </div>
         </div>
         <div className={style.post_image_preview_area}>
-          <div className={style.image_preview}>
-            <img
-              src={imagePreview ? imagePreview : postImage}
-              alt="post image"
-            />
-            {imagePreview && (
-              <span
-                className={style.remove_photo}
-                onClick={() => {
-                  setImagePreview(null);
-                  setUpdatePostImage(null);
-                }}
-              >
-                <FontAwesomeIcon icon={faCircleXmark} />
-              </span>
-            )}
-          </div>
+          {(postImage || imagePreview) && (
+            <div className={style.image_preview}>
+              <img
+                src={imagePreview ? imagePreview : postImage}
+                alt="post image"
+              />
+              {imagePreview && (
+                <span
+                  className={style.remove_photo}
+                  onClick={() => {
+                    setImagePreview(null);
+                    setUpdatePostImage(null);
+                  }}
+                >
+                  <FontAwesomeIcon icon={faCircleXmark} />
+                </span>
+              )}
+            </div>
+          )}
         </div>
         <div className={style.footer_section}>
           <span
@@ -178,7 +180,7 @@ const EditPostModal = ({
             />
             <FontAwesomeIcon icon={faPhotoFilm} />
           </span>
-          <button
+          {/* <button
             disabled={
               postTitle.localeCompare(postEditPostDetails?.title) !== 0 ||
               postContent.localeCompare(postEditPostDetails?.content) !== 0 ||
@@ -190,6 +192,23 @@ const EditPostModal = ({
               postTitle.localeCompare(postEditPostDetails?.title) !== 0 ||
               postContent.localeCompare(postEditPostDetails?.content) !== 0 ||
               updatePostImage
+                ? style.active_btn
+                : ""
+            }`}
+            onClick={handleUpdatePost}
+          > */}
+          <button
+            disabled={
+              postTitle.localeCompare(postEditPostDetails?.title) !== 0 ||
+              postContent.localeCompare(postEditPostDetails?.content) !== 0 ||
+              imagePreview
+                ? false
+                : true
+            }
+            className={`${style.post_update_button} ${
+              postTitle.localeCompare(postEditPostDetails?.title) !== 0 ||
+              postContent.localeCompare(postEditPostDetails?.content) !== 0 ||
+              imagePreview
                 ? style.active_btn
                 : ""
             }`}
