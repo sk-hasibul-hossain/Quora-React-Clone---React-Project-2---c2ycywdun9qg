@@ -130,6 +130,9 @@ const QuoraHeader = () => {
             <img
               src="https://seeklogo.com/images/Q/quora-logo-2E2DD559F2-seeklogo.com.png"
               alt="logo-not-loaded"
+              onClick={() => {
+                navigate("/");
+              }}
             />
           </div>
           <div className={style.quora_header_search_wrapper_mobile}>

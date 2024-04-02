@@ -104,11 +104,12 @@
     padding: 8px 16px;
     border: none;
     border-radius: 20px 20px 20px 20px;
+    cursor: not-allowed;
 }
 
 .active_btn{
     background-color: #2e69ff;
-    cursor: pointer;
+    cursor: not-allowed;
 }
 
 .box_wrapper{

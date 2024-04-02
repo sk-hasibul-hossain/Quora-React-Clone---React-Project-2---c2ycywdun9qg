@@ -130,9 +130,51 @@ const MiddleBar = () => {
       }
     }
   }, [isNewPost, hidePostStatus, updatePost, postDeleteId]);
+  const handleAssendigOrder = () => {
+    // console.log(
+    //   tempPostData.sort((a, b) => {
+    //     new Date(b.createdAt) - new Date(a.createdAt);
+    //   })
+    // );
+    // setTempPostData((prev) => {
+    //   return prev.sort((a, b) => {
+    //     new Date(b.createdAt) - new Date(a.createdAt);
+    //   });
+    // });
+    setTempPostData((prev) => {
+      const arr = [];
+      for (let i = prev.length - 1; i >= 0; i--) {
+        arr.push(prev[i]);
+      }
+      return arr;
+    });
+  };
+  const handleDssendigOrder = () => {
+    // console.log(
+    //   tempPostData.sort((a, b) => {
+    //     new Date(a.createdAt) - new Date(b.createdAt);
+    //   })
+    // );
+    // setTempPostData((prev) => {
+    //   return prev.sort((a, b) => {
+    //     new Date(a.createdAt) - new Date(b.createdAt);
+    //   });
+    // });
+    // setTempPostData((prev) => {
+    //   const arr = [];
+    //   for (let i = prev.length - 1; i >= 0; i--) {
+    //     arr.push(prev[i]);
+    //   }
+    //   return arr;
+    // });
+  };
   return (
     <div className={style.middle_bar_container}>
       <ShareDeskBox userSortName={userSortName} />
+      {/*<div className={style.add_fn}>
+        <button onClick={handleAssendigOrder}>Assending</button>
+        <button onClick={handleDssendigOrder}>Decnding</button>
+      </div>*/}
       <div className={style.quora_home_feeds}>
         {isLoading ? (
           <BarLoader />

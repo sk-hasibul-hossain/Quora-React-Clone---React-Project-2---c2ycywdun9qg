@@ -70,13 +70,15 @@ const FeedCommentCard = ({
         </div>
       </div>
       <div className={style.delete_wraper}>
-        <span
-          onClick={() => {
-            steIsDeleteBtnOpen((prev) => !prev);
-          }}
-        >
-          <FontAwesomeIcon icon={faEllipsis} />
-        </span>
+        {userId?.localeCompare(comment?.author) === 0 && (
+          <span
+            onClick={() => {
+              steIsDeleteBtnOpen((prev) => !prev);
+            }}
+          >
+            <FontAwesomeIcon icon={faEllipsis} />
+          </span>
+        )}
         {isDeleteBtnOpen && (
           <div
             className={style.delete_comment_btn_area}
