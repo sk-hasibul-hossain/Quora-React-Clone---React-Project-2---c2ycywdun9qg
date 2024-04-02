@@ -153,11 +153,18 @@ const CreatePost = ({ setIsPostAndQuestionOpen }) => {
           />
           <FontAwesomeIcon icon={faPhotoFilm} />
         </span>
-        <button
+        {/* <button
           className={`${style.post_create_btn} ${
             postContent && postImage && postTitle ? style.active_btn : ""
           }`}
           disabled={postContent && postImage && postTitle ? false : true}
+          onClick={handleCreatePost}
+        > */}
+        <button
+          className={`${style.post_create_btn} ${
+            postContent && postTitle ? style.active_btn : ""
+          }`}
+          disabled={postContent && postTitle ? false : true}
           onClick={handleCreatePost}
         >
           Post

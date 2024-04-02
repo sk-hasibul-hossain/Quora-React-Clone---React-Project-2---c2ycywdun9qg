@@ -247,9 +247,11 @@ const QuoraHomeFeedCard = ({
           <p>{post?.content}</p>
         </div>
       </div>
-      <div className={style.quora_home_feed_image}>
-        <img src={post?.images[0]} alt="home feed image" />
-      </div>
+      {post?.images[0] && (
+        <div className={style.quora_home_feed_image}>
+          <img src={post?.images[0]} alt="home feed image" />
+        </div>
+      )}
       <div className={style.post_footer_section}>
         <div className={style.vote_and_comment_section}>
           <div className={style.up_vote_and_down_vote_box}>
