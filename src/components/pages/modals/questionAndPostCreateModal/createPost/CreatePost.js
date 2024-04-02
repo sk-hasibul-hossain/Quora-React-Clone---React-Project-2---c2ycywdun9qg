@@ -10,7 +10,7 @@ import {
   useNightMode,
 } from "../../../../../provider/AuthProvider";
 
-const CreatePost = () => {
+const CreatePost = ({ setIsPostAndQuestionOpen }) => {
   const { setIsCreatedModalOpen } = useCreatedModal();
   const { setIsNewPost } = useNewPostStatus();
   const { isNightMode } = useNightMode();
@@ -83,6 +83,7 @@ const CreatePost = () => {
     // console.log(postContent, postImage, postTitle);
     createPostAPI(postContent, postImage, postTitle);
     setIsCreatedModalOpen("Post created");
+    setIsPostAndQuestionOpen("");
   };
   return (
     <div className={style.create_post_container}>

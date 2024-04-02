@@ -65,7 +65,7 @@ const questionAndPostCreateModal = ({
           {isPostAndQuestionOpen === "question" ? (
             <AddQuestion setIsPostAndQuestionOpen={setIsPostAndQuestionOpen} />
           ) : (
-            <CreatePost />
+            <CreatePost setIsPostAndQuestionOpen={setIsPostAndQuestionOpen} />
           )}
         </div>
       </div>
