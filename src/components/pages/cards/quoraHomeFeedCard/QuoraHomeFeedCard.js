@@ -133,45 +133,49 @@ const QuoraHomeFeedCard = ({
   };
 
   const handleUpVote = () => {
-    //using local strage
-    const getAllLocalVal = getLikedLocalStorageValue();
-    getAllLocalVal[index].liked = !postLikedDetails?.liked;
-    getAllLocalVal[index].upVote = !postLikedDetails.liked
-      ? parseInt(postLikedDetails.upVote) + 1
-      : parseInt(postLikedDetails.upVote) - 1;
-    setLikedLocalStorageValue(getAllLocalVal);
+    if (!postLikedDetails.disliked) {
+      //using local strage
+      const getAllLocalVal = getLikedLocalStorageValue();
+      getAllLocalVal[index].liked = !postLikedDetails?.liked;
+      getAllLocalVal[index].upVote = !postLikedDetails.liked
+        ? parseInt(postLikedDetails.upVote) + 1
+        : parseInt(postLikedDetails.upVote) - 1;
+      setLikedLocalStorageValue(getAllLocalVal);
 
-    //state Change
-    setPostLikedDetails((prev) => {
-      return {
-        ...prev,
-        liked: !prev.liked,
-        upVote: !prev.liked
-          ? parseInt(prev.upVote) + 1
-          : parseInt(prev.upVote) - 1,
-      };
-    });
+      //state Change
+      setPostLikedDetails((prev) => {
+        return {
+          ...prev,
+          liked: !prev.liked,
+          upVote: !prev.liked
+            ? parseInt(prev.upVote) + 1
+            : parseInt(prev.upVote) - 1,
+        };
+      });
+    }
   };
 
   const handleDownVote = () => {
-    //using local strage
-    const getAllLocalVal = getLikedLocalStorageValue();
-    getAllLocalVal[index].disliked = !postLikedDetails.disliked;
-    getAllLocalVal[index].downVote = !postLikedDetails.disliked
-      ? parseInt(postLikedDetails.downVote) + 1
-      : parseInt(postLikedDetails.downVote) - 1;
-    setLikedLocalStorageValue(getAllLocalVal);
+    if (!postLikedDetails.liked) {
+      //using local strage
+      const getAllLocalVal = getLikedLocalStorageValue();
+      getAllLocalVal[index].disliked = !postLikedDetails.disliked;
+      getAllLocalVal[index].downVote = !postLikedDetails.disliked
+        ? parseInt(postLikedDetails.downVote) + 1
+        : parseInt(postLikedDetails.downVote) - 1;
+      setLikedLocalStorageValue(getAllLocalVal);
 
-    //state Change
-    setPostLikedDetails((prev) => {
-      return {
-        ...prev,
-        disliked: !prev.disliked,
-        downVote: !prev.disliked
-          ? parseInt(prev.downVote) + 1
-          : parseInt(prev.downVote) - 1,
-      };
-    });
+      //state Change
+      setPostLikedDetails((prev) => {
+        return {
+          ...prev,
+          disliked: !prev.disliked,
+          downVote: !prev.disliked
+            ? parseInt(prev.downVote) + 1
+            : parseInt(prev.downVote) - 1,
+        };
+      });
+    }
   };
   const deletePostAPI = async (postId) => {
     const config = {
