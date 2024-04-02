@@ -80,7 +80,7 @@ const MiddleBar = () => {
     const scrollPosition = window.scrollY;
     const totalHeight =
       document.documentElement.scrollHeight - window.innerHeight;
-    console.log(scrollPosition, totalHeight);
+    // console.log(scrollPosition, totalHeight);
     if (totalHeight * 0.8 <= scrollPosition && postData?.length > count) {
       // console.log(count);
       setCount(count + 5);
@@ -94,7 +94,7 @@ const MiddleBar = () => {
   }, [tempPostData]);
 
   useEffect(() => {
-    console.log(count, tempPostData);
+    // console.log(count, tempPostData);
     if (tempPostData?.length > 0) {
       setTempPostData([...tempPostData, ...postData?.slice(count, count + 5)]);
     }

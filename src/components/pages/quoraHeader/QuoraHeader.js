@@ -77,6 +77,15 @@ const QuoraHeader = () => {
     ) {
       setIsSearchAreaOpen(false);
     }
+
+    // console.log(notificationRef.current, e.target);
+
+    if (
+      notificationRef.current &&
+      !notificationRef.current.contains(e.target)
+    ) {
+      setIsNotificationOpen(false);
+    }
   };
 
   useEffect(() => {
@@ -251,7 +260,7 @@ const QuoraHeader = () => {
               </NavLink>
             </div>
             <div className={style.quora_header_icon}>
-              <NavLink
+              <div
                 className={style.quora_header_nav_link}
                 ref={notificationRef}
                 onClick={() => {
@@ -259,7 +268,7 @@ const QuoraHeader = () => {
                 }}
               >
                 <FontAwesomeIcon icon={faBell} />
-              </NavLink>
+              </div>
               {isNotificationOpen && (
                 <div className={style.notification_container}>
                   <div className={style.notification_title}>
