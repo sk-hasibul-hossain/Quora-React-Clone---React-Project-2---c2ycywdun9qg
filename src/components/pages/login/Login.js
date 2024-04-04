@@ -88,6 +88,10 @@ const Login = () => {
       navigate("/");
     }
   }, []);
+
+  const callWarning = () => {
+    alert("This functionality is yet to be implemented");
+  };
   return (
     <div className={style.login_container}>
       <div className={style.inner_login_container}>
@@ -111,7 +115,7 @@ const Login = () => {
               <span>Terms of Service</span> and <span>Privacy Policy.</span>
             </h2>
             <div className={style.login_with_area}>
-              <section>
+              <section onClick={callWarning}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -142,7 +146,7 @@ const Login = () => {
                 </svg>
                 <label>Continue with Google</label>
               </section>
-              <section>
+              <section onClick={callWarning}>
                 <svg
                   width="24"
                   height="24"
