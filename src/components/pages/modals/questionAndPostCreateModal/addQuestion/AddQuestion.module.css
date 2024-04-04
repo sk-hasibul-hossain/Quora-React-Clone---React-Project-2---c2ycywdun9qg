@@ -134,3 +134,8 @@
         color: #929090;
     }
 }
+
+.warning{
+    font-size: 0.87rem;
+    color: rgb(255, 0, 0);
+}

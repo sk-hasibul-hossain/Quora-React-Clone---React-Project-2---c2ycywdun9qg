@@ -83,6 +83,9 @@ const AddQuestion = ({ setIsPostAndQuestionOpen }) => {
           />
         </div>
         <div className={style.question_button_area}>
+          <p className={style.warning}>
+            *This functionality is yet to be implemented
+          </p>
           <button
             className={style.question_cancel_btn}
             onClick={() => {
