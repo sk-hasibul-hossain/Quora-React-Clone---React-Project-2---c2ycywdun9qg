@@ -55,8 +55,9 @@ const Login = () => {
       );
       // console.log(response.data);
       const token = response.data.token;
+      console.log(response.data);
       if (token) {
-        const userData = response.data.data;
+        const userData = response.data.data.user;
         sessionStorage.setItem("userToken", JSON.stringify(token));
         sessionStorage.setItem(
           "userData",
